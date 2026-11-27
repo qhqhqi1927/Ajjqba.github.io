@@ -600,7 +600,7 @@ $("#ndl").onclick=function(){delete NOTES[nk];nsave();nclose();nrefresh()};$("#n
 document.addEventListener("click",function(e){var l=e.target.closest&&e.target.closest("#ls .les,#td .les,#tm .les");if(!l||!l.dataset.k)return;if(Math.abs(e.clientX-sx)>10||Math.abs(e.clientY-sy)>10)return;nopen(l.dataset.k)});
 /* поделиться */
 function toast(m){var e=$("#toast");e.textContent=m;e.classList.add("on");clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove("on")},1800)}
-function shareDay(i,f){var L=S[i][1].filter(function(l){return f=="all"||l[4]=="a"||l[4]==f}),t=S[i][0]+(f!="all"?" ("+PL[f]+")":"")+"
+function shareDay(i,f){var L=S[i][1].filter(function(l){return f=="all"||l[4]=="a"||l[4]==f}),t=S[i][0]+(f!="all"?" ("+PL[f]+")":"")+"\n"+L.map(function(l){var n=NOTES[i+"|"+l[0]+"|"+l[2]];return l[0]+"–"+l[1]+" "+l[2]+(l[3]?" ["+l[3]+"]":"")+(n?" 📝 "+n:"")}).join("\n")+"\n— ПОВТАСк-01-25";
 "+L.map(function(l){var n=NOTES[i+"|"+l[0]+"|"+l[2]];return l[0]+"–"+l[1]+" "+l[2]+(l[3]?" ["+l[3]+"]":"")+(n?" 📝 "+n:"")}).join("
 ")+"
 — ПОВТАСк-01-25";
