@@ -273,7 +273,7 @@ body.ios .ghost{animation:none}
 <section class="scr on" id="m-menu">
   <nav class="mm" id="mm"></nav>
   <div class="cmd" id="cmd"></div>
-  </section>
+</section>
 
 <section class="scr" id="m-today"><div class="box">
   <div class="ttl"><span>Сегодня</span></div>
@@ -294,27 +294,7 @@ body.ios .ghost{animation:none}
   <div class="card p"><span>Что получишь</span><small>Иконка на экране, запуск без адресной строки и работа без интернета после первого открытия</small></div>
   <button class="shr" id="dlb" style="display:none">⤓ Установить сейчас</button><button class="back" data-back>◄ Назад</button></div></section>
 
-<section class="scr" id="m-corps"><div class="box">
-  <div class="ttl"><span>Корпуса</span></div>
-  <a class="card" target="_blank" rel="noopener" href="https://2gis.kz/karaganda/geo/11822584677009298/73.104312,49.818718"><span>Главный корпус</span><small>Открыть в 2GIS ►</small></a>
-  <a class="card" target="_blank" rel="noopener" href="https://2gis.kz/karaganda/geo/11822477302846367/73.104790,49.820658"><span>1 корпус</span><small>Открыть в 2GIS ►</small></a>
-  <a class="card" target="_blank" rel="noopener" href="https://2gis.kz/karaganda/geo/70000001033176236"><span>5 корпус</span><small>Открыть в 2GIS ►</small></a>
-  <button class="back" data-back>◄ Назад</button></div></section>
-
-<section class="scr" id="m-about"><div class="box">
-  <div class="ttl"><span>Авторы</span></div>
-  <div class="card p"><span>Разработка</span><small>Тарлан</small></div>
-  <div class="card p"><span>Бета-тестеры</span><small>Анатолий · Костя</small></div>
-  <button class="back" data-back>◄ Назад</button></div></section>
-
 <div class="now"><span class="cd" id="cd"></span><span class="ct" id="ct"></span></div>
-<section class="scr" id="m-patch"><div class="box">
-  <div class="ttl"><span>Patch Note</span></div>
-  <div class="dn">Обновление 2</div>
-  <ul class="pn"><li style="--n:0"><span>добавлена страница «Сегодня»: пары на сегодня и на завтра</span></li><li style="--n:1"><span>подсветка текущей пары с меткой «СЕЙЧАС» и таймером до конца</span></li><li style="--n:2"><span>если пары сейчас нет, показывается через сколько начнётся следующая</span></li><li style="--n:3"><span>сайт можно установить на экран телефона как приложение, он работает без интернета</span></li><li style="--n:4"><span>заметки к парам: нажми на пару и запиши дз или что принести (хранится в браузере)</span></li><li style="--n:5"><span>звуки интерфейса в стиле игр, кнопка ♬ (по умолчанию выключены)</span></li><li style="--n:6"><span>добавлена третья тема — жёлто-розовая, как в Persona 4 Golden</span></li><li style="--n:7"><span>пасхалки: код Konami и тройной клик по названию, в полночь включается Тёмный час</span></li><li style="--n:8"><span>кнопка «Поделиться» отправляет расписание дня</span></li><li style="--n:9"><span>lofi-музыка вместо джаза, кнопка ♪</span></li><li style="--n:10"><span>новое меню как в Persona 3 Reload и Persona 5 Royal</span></li><li style="--n:11"><span>пункты меню «Корпуса», «Авторы» и «Patch Note»</span></li><li style="--n:12"><span>убрана заставка со стеклом, кнопки меню выезжают при открытии</span></li><li style="--n:13"><span>исправлено на iPhone: экран больше не закрашивается при нажатии</span></li><li style="--n:14"><span>добавлен пункт меню «Скачать»: инструкция по установке для iPhone и Android</span></li></ul>
-  <div class="dn">Обновление 1</div>
-  <ul class="pn"><li style="--n:0"><span>добавлены свайпы влево вправо</span></li><li style="--n:1"><span>добавлены анимации при свайпе</span></li><li style="--n:2"><span>добавлены анимации при переключении на другие дни</span></li><li style="--n:3"><span>добавлена другая тема</span></li><li style="--n:4"><span>добавлена кнопка смены темы</span></li><li style="--n:5"><span>добавлена кнопка отключение анимации для слабых устройств</span></li><li style="--n:6"><span>добавлены кнопки главный корпус, первый, и пятый, кнопки переносят в 2гис</span></li><li style="--n:7"><span>добавлена анимация смены темы</span></li><li style="--n:8"><span>оптимизация под телефоны</span></li><li style="--n:9"><span>улучшенный интерфейс для пк</span></li><li style="--n:10"><span>сайт автоматически выбирает неделю то есть знам или числ</span></li></ul>
-  <button class="back" data-back>◄ Назад</button></div></section>
 
 <div id="nm"><div class="nb"><b id="nt0"></b><textarea id="nta" maxlength="200" placeholder="Заметка: дз, что принести…"></textarea><div class="nr"><button id="nsv">Сохранить</button><button id="ndl">Удалить</button><button id="ncl">✕</button></div></div></div>
 <div id="toast"></div>
@@ -373,7 +353,7 @@ function cmd(){var t="МЕНЮ",h="";var fs=["Russo One","Rubik","Oswald","Monts
  $("#cmd").innerHTML=h}
 function open(id){sfx("ok");wipe(function(){swap(id)})}
 function swap(id){cur=id;document.querySelectorAll(".scr").forEach(function(s){s.classList.toggle("on",s.id==id)});
- $("#ghost").textContent=id=="m-dl"?"Скачать":id=="m-today"?"Сегодня":id=="m-menu"?"Меню":id=="m-sched"?"Пары":id=="m-corps"?"Карта":id=="m-patch"?"Патч":"Авторы";if(id=="m-sched")draw();if(id=="m-today")updToday(true);if(id=="m-menu")slam()}
+ $("#ghost").textContent=id=="m-dl"?"Скачать":id=="m-today"?"Сегодня":id=="m-sched"?"Пары":"Меню";if(id=="m-sched")draw();if(id=="m-today")updToday(true);if(id=="m-menu")slam()}
 document.querySelectorAll("[data-back]").forEach(function(b){b.onclick=function(){open("m-menu")}});
 
 /* расписание */
@@ -495,7 +475,6 @@ function theme() {
         svg.remove(); dg.remove();
         cls.forEach(function (e, i) { e.animate([{translate:"0 0"},{translate:"0 105%"}], {duration:380,delay:i*70,easing:"cubic-bezier(.6,0,.9,.4)",fill:"both"}); });
         document.body.animate([{translate:"-8px 4px"},{translate:"7px -5px"},{translate:"0 0"}], {duration:320});
-        /* фон и текст-плашку убираем ТОЛЬКО когда плашка уже погасла, иначе новая тема просвечивает под ней */
         w.animate([{opacity:1},{opacity:0,scale:1.5}], {duration:350,fill:"both"}).finished.then(function () {
           fx.style.background = "transparent"; fx.style.backdropFilter = "none"; w.remove();
         });
@@ -621,7 +600,10 @@ $("#ndl").onclick=function(){delete NOTES[nk];nsave();nclose();nrefresh()};$("#n
 document.addEventListener("click",function(e){var l=e.target.closest&&e.target.closest("#ls .les,#td .les,#tm .les");if(!l||!l.dataset.k)return;if(Math.abs(e.clientX-sx)>10||Math.abs(e.clientY-sy)>10)return;nopen(l.dataset.k)});
 /* поделиться */
 function toast(m){var e=$("#toast");e.textContent=m;e.classList.add("on");clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove("on")},1800)}
-function shareDay(i,f){var L=S[i][1].filter(function(l){return f=="all"||l[4]=="a"||l[4]==f}),t=S[i][0]+(f!="all"?" ("+PL[f]+")":"")+"\n"+L.map(function(l){var n=NOTES[i+"|"+l[0]+"|"+l[2]];return l[0]+"–"+l[1]+" "+l[2]+(l[3]?" ["+l[3]+"]":"")+(n?" 📝 "+n:"")}).join("\n")+"\n— ПОВТАСк-01-25";
+function shareDay(i,f){var L=S[i][1].filter(function(l){return f=="all"||l[4]=="a"||l[4]==f}),t=S[i][0]+(f!="all"?" ("+PL[f]+")":"")+"
+"+L.map(function(l){var n=NOTES[i+"|"+l[0]+"|"+l[2]];return l[0]+"–"+l[1]+" "+l[2]+(l[3]?" ["+l[3]+"]":"")+(n?" 📝 "+n:"")}).join("
+")+"
+— ПОВТАСк-01-25";
  if(navigator.share)navigator.share({text:t}).catch(function(){});else if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){toast("Скопировано ✓")},function(){toast("Не удалось скопировать")});else toast("Не удалось скопировать")}
 $("#shS").onclick=function(){shareDay(di,wk)};
 $("#shT").onclick=function(){var n=new Date(),i=tIdx(n);if(i<0){toast("Сегодня выходной");return}shareDay(i,par(n))};
@@ -636,7 +618,7 @@ $("#sfb").onclick=function(){sfxOn=!sfxOn;try{localStorage.sfx=sfxOn?"1":"0"}cat
 /* пасхалки */
 var KK=["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"],kp=0;
 function secret(){sfx("pop");if(lite){toast("★ KONAMI ★");return}
- var w=document.createElement("div");w.className="wd";w.style.position="fixed";w.style.zIndex=120;w.style.fontSize="min(8vw,80px)";w.textContent="★ KONAMI · РЕЖИМ ТАРЛАНА ★";document.body.appendChild(w);
+ var w=document.createElement("div");w.className="wd";w.style.position="fixed";w.style.zIndex=120;w.style.fontSize="min(8vw,80px)";w.textContent="★ KONAMI · ПОВТАСк-01-25 ★";document.body.appendChild(w);
  w.animate([{opacity:0,scale:3,rotate:"-20deg"},{opacity:1,scale:1,rotate:"-6deg",offset:.2},{opacity:1,scale:1,rotate:"-6deg",offset:.8},{opacity:0,scale:1.6}],3200).onfinish=function(){w.remove()};
  var C=["#e8141c","#22d3ff","#ffd400","#fff","#ff2d6f"];
  for(var i=0;i<80;i++)(function(){var e=document.createElement("i"),a=Math.random()*6.28,d=150+Math.random()*450;e.style.cssText="position:fixed;z-index:119;left:50%;top:50%;pointer-events:none;width:"+(8+Math.random()*16)+"px;height:"+(8+Math.random()*16)+"px;background:"+C[i%5]+";clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)";document.body.appendChild(e);
